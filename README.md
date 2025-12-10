@@ -1,28 +1,20 @@
 # SysMatrix - Linux System Monitor
 
-**SysMatrix** is a lightweight, Python-based system administration tool designed for Linux environments. It monitors system health metrics (CPU, Memory, Disk), logs them to a local database, and performs security audits on user activity.
+SysMatrix is a command-line tool designed to monitor Linux system resources and perform basic security audits. It collects CPU, memory, and disk usage metrics, stores them in a local SQLite database, and checks for privileged user activity.
+
+I built this tool to automate the tracking of server health and to provide quick visibility into system status without needing complex monitoring infrastructure.
 
 ## Features
-* **Real-time Collection:** Monitors system uptime, CPU load, and memory usage.
-* **Data Persistence:** Uses SQLite (`data/sysmatrix.db`) to store historical metrics.
-* **Security Auditing:** Tracks `sudo` users and recent login activity.
-* **CLI Interface:** Simple command-line tools for administration.
-* **Automation:** Designed to run via `cron` for background monitoring.
+
+- **Resource Monitoring:** Captures CPU load, memory usage, and disk space in real-time.
+- **History Tracking:** Saves all metrics to a local SQLite database for historical analysis.
+- **Security Auditing:** Lists users with sudo privileges and displays recent login history.
+- **CLI Interface:** Simple command-line arguments to trigger different functions.
+- **Cron Ready:** Designed to be scheduled via crontab for continuous background monitoring.
 
 ## Installation
 
-1.  Clone the repository:
-    ```bash
-    git clone [https://github.com/azanw/sysmatrix.git](https://github.com/azanw/sysmatrix.git)
-    cd sysmatrix
-    ```
-2.  Install dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-## Usage
-
-**1. Collect Metrics (Run manually or via Cron)**
-```bash
-python3 sysmatrix.py collect
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/azanw/sysmatrix.git](https://github.com/azanw/sysmatrix.git)
+   cd sysmatrix
